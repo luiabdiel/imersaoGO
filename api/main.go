@@ -20,6 +20,11 @@ type User struct {
 }
 
 func getUsers(w http.ResponseWriter, r *http.Request) {
+
+	if r.Method != "GET" {
+		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
+	}
+
 	w.Header().Set("Content=Type", "application/json")
 	json.NewEncoder(w).Encode([]User{
 		{
