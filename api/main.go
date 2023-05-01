@@ -32,7 +32,7 @@ func getUsers(w http.ResponseWriter, r *http.Request) {
 			Name: "Ronaldo",
 		},
 		{
-			ID:   1,
+			ID:   2,
 			Name: "Messi",
 		},
 	})
